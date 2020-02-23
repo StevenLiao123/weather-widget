@@ -1,5 +1,9 @@
 ################ Weather Widget ################
 
+- Responsive for different devices
+
+Demo link: https://weather-widget-project.herokuapp.com/
+
 # shows how you would structure a front end solution.
 {
     "Technical stacks": {
@@ -22,7 +26,8 @@
     - git pull the project from the Github
     - cd the project
     - npm install
-    - npm run start           
+    - npm run start
+    - npm run test (for test only)           
 
 # Resources for soling problems
     - Used 'digital color meter' to capture the color from whevever I want and make the RGB to HEX (For UI consistency)
@@ -30,10 +35,13 @@
     - Used 'openweathermap API documentation' to find out the correct API calls with parameters
     - Used 'Postman' to test the API 
 
-# Manual test
+# Manual tests
     - Test the data of editor can be saved to state and pass to App container 
     - Test App container get the data from editor and pass to widget component
     - Test the data of widget displays by the settings in the editor
+
+# Unit tests
+    - unit tests have been added into the test folder    
 
 # About the test
     The test is a good example for testing an applicant all the skills for the front-end side. For example, how to divide the project to different sections and how to make it match the design. More importantly, logic for capturing the user current location and then get the weather data should be one of the biggest challenges in this test, which can test asynchronous rendering, setState and so on.
