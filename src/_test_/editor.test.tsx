@@ -1,24 +1,21 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import Adapter from 'enzyme-adapter-react-16';
+import { shallow, configure } from 'enzyme';
 import Editor from '../components/editor';
 
-it('renders without crashing', () => {
-  const input = document.createElement('input');
-  //@ts-ignore
-  ReactDOM.render(<Editor />, input);
-  ReactDOM.unmountComponentAtNode(input);
+configure({adapter: new Adapter()});
+describe('<Editor /> rendering', () => {
+    const jsdomAlert = window.alert;  // remember the jsdom alert
+    window.alert = () => {};  // provide an empty implementation for window.alert
+    it('should render five <button>', () => {
+        //@ts-ignore
+        let wrapper = shallow(<Editor />);
+        expect(wrapper.children('button')).toHaveLength(1);
+    });
+
+    it('should render two <input> in className weather-editor-unit-settings', () => {
+        //@ts-ignore
+        let wrapper = shallow(<Editor />);
+        expect(wrapper.hasClass('weather-editor-unit-settings')).toHaveBeenCalled;
+    });
 });
-
-// describe('Editor', () => {
-//     it('should rendera a tag with className "weather-editor-title"', () => {
-//         const testRender = 
-//     });
-// });
-
-
-// it('should render ', () => {
-//     const button = document.createElement('button');
-//     //@ts-ignore
-//     ReactDOM.render(<Editor />, button);
-//     ReactDOM.unmountComponentAtNode(button);
-// });
