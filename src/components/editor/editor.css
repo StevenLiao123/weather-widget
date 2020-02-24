@@ -90,6 +90,11 @@
 
     .weather-editor-title, .weather-editor-unit, .weather-editor-wind {
         width: 90%;
+        height: 20%;
+    }
+
+    button {
+        margin: 10px;
     }
 
     .weather-editor-title input {

@@ -37,6 +37,6 @@ html {
 @media only screen and (max-width: 415px) {
   .App {
       width: 300px;
-      height: 500px;
+      height: 600px;
   }
 }
